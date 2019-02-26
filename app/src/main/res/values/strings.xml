@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DialogFlow</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="button_single_show">标准对话框</string>
+    <string name="button_single_with_classbck_show">有回调的标准对话框</string>
+    <string name="button_background_set_show">设置背景的</string>
+    <string name="button_login_input">用户名输入提示</string>
+    <string name="button_relative_layout">相对布局</string>
+</resources>
