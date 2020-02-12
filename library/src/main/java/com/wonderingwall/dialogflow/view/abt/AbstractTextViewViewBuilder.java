@@ -3,11 +3,12 @@ package com.wonderingwall.dialogflow.view.abt;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.ColorInt;
-import android.support.annotation.StringRes;
 import android.text.method.PasswordTransformationMethod;
 import android.text.method.TransformationMethod;
 import android.widget.TextView;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.StringRes;
 
 import com.wonderingwall.dialogflow.DialogFlow;
 import com.wonderingwall.dialogflow.view.base.BaseViewBuilder;

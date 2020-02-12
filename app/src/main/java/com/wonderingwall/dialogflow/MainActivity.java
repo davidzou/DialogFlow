@@ -3,15 +3,17 @@ package com.wonderingwall.dialogflow;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import static android.widget.RelativeLayout.BELOW;
 
@@ -67,6 +69,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickSingleButton(View view) {
         // 简单对话框，包含标题，内容
+        // +----------------------+
+        // |       Sample         |
+        // +----------------------+
+        // |  Hello Everyone!!!   |
+        // |  This is super single|
+        // |     Dialog.          |
+        // +----------------------+
         DialogFlow
                 // 初始化默认布局
                 .init(MainActivity.this)
@@ -76,6 +85,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickSingleButtonWithCallback(View view) {
         // 简单对话框，包含标题，内容，和一个按钮及回调处理
+        // +----------------------+
+        // |       Sample         |
+        // +----------------------+
+        // |  Hello Everyone!!!   |
+        // |  This is super single|
+        // |     Dialog.          |
+        // +----------------------+
+        // |        OK            |
+        // +----------------------+
         DialogFlow
                 // 初始化默认布局
                 .init(MainActivity.this)

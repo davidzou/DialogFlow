@@ -1,7 +1,8 @@
 package com.wonderingwall.dialogflow.view.impl;
 
-import android.support.annotation.IdRes;
 import android.widget.RelativeLayout;
+
+import androidx.annotation.IdRes;
 
 import com.wonderingwall.dialogflow.view.base.BasicLayoutParamsProvider;
 

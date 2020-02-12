@@ -2,8 +2,9 @@ package com.wonderingwall.dialogflow.view;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.support.annotation.NonNull;
 import android.widget.EditText;
+
+import androidx.annotation.NonNull;
 
 import com.wonderingwall.dialogflow.DialogFlow;
 import com.wonderingwall.dialogflow.view.abt.AbstractTextViewViewBuilder;
