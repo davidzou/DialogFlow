@@ -1,0 +1,39 @@
+apply plugin: 'maven'
+
+
+def origin = System.getProperty("origin")?:"local"
+def version_name = "1.0.0"
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            pom.groupId = "com.wonderingwall"
+            pom.artifactId = "dialogflow"
+            pom.project {
+                description '1. 增加onError针对错误日志上报添加接口'
+            }
+            // 提交至本地库
+            switch (origin) {
+                case "snapshot":
+                    // 提交至maven库
+                    pom.version = "${version_name}-SNAPSHOT"
+                    repository(url: "${nexusUrl}/content/repositories/snapshots") {
+                        authentication(userName: nexusUsername, password: nexusPassword)
+                    }
+                    break;
+                case "release":
+                    // 提交至maven库正式版本
+                    pom.version = "${version_name}"
+                    repository(url: "${nexusUrl}/content/repositories/releases"){
+                        authentication(userName:nexusUsername, password:nexusPassword)
+                    }
+                    break;
+                case "repo":
+                default:
+                    pom.version = "${version_name}-SNAPSHOT"
+                    repository(url: uri('../repo'))
+                    break;
+            }
+        }
+    }
+}
